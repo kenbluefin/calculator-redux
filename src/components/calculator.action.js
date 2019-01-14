@@ -13,12 +13,7 @@ let divide = () => store.dispatch({type: 'OPERATOR', func:(a, b) => a / b});
 let equals = () => store.dispatch({type: 'EQUAL', func:(a, b) => b});
 let clear = () => store.dispatch({type: 'CLEAR'});
 
-function render() {
-    let num = document.getElementById('display');
-    num.innerHTML = store.getState().number;
-}
 
-store.subscribe(render);
 
 export {
     inputEle,
